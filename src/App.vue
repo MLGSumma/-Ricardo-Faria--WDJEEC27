@@ -10,8 +10,6 @@ const title = ref('My First Website')
   <div class="container">
   <h1>JEEC</h1>
   <h2>Speakers</h2>
-  <img :src="luffy" class="luffy">
-  <img :src="mrbeast" class="beast">
   
   </div>
 </template>
@@ -40,19 +38,6 @@ h2 {
     text-shadow: 0 0 10px #0980ff,
                0 0 20px #ffffff,
                0 0 40px #ffffff;
-}
-
-.beast {
-  margin-top: 2600px;
-  height: 100px;
-  width: 500px;
-  scale: 10;
-}
-.luffy {
-  margin-top: 400px;
-  height: 500px;
-  width: 400px;
-  scale: 5;
 }
 </style>
 
