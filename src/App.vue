@@ -1,8 +1,7 @@
 <script setup>
 import { ref, onMounted} from 'vue'
-import mrbeast from './assets/mrbeast-ytpmv.gif'
-import luffy from './assets/luffy.gif'
 import commentbox from './components/commentbox.vue'
+import images from './components/Imagens.vue'
 const title = ref('My First Website')
 
 function buttonpress(){
@@ -15,7 +14,9 @@ function buttonpress(){
   <div class="container">
   <h1>JEEC</h1>
   <h2>Speakers</h2>
+  <images></images>
   <button @click="buttonpress" class = "voteButton">VOTAR</button>
+  <h3>Vota num dos 3 speakers!</h3>
   <commentbox></commentbox>
   </div>
 </template>
@@ -46,14 +47,26 @@ h2 {
                0 0 40px #ffffff;
 }
 
+h3 {
+  margin-block: 60px;
+  font-family: Lexend Exa;
+  color: #ffffff;
+  font-size: 35px;
+    text-shadow: 0 0 10px #0980ff,
+               0 0 20px #ffffff,
+               0 0 40px #ffffff;
+}
+
 .voteButton{
   border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
   scale: 4;
-  border-radius: 34px;
   background-color: rgba(0, 0, 255, 0.294);
   font-family: 'Lexend Exa';
   padding: 3px;
-  line-height: .9;
+  line-height: .8;
+  
 }
 
 .voteButton:hover{
@@ -71,7 +84,7 @@ h2 {
 }
 
 body {
-  background-color: rgba(16, 11, 167, 0.213);
+  background-color: rgba(5, 0, 136, 0.213);
   border-left: none;
   border-right: none;
 }
