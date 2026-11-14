@@ -43,16 +43,19 @@ function addComment() {
 </template>
 
 <style scoped>
+
 .comment-section {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
   width: 100%;
-  margin:  auto;
+  max-width: 1000px;
   text-align: center;
   padding: 200px;
+  box-sizing: border-box;
+  margin-inline: auto;
+  
 }
-
+  
 textarea {
   width: 100%;
   min-height: 100px;
