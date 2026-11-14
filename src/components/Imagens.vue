@@ -7,21 +7,28 @@ import kakyoin from '../assets/Kakyoin.png'
 
 const emit = defineEmits(['change-speaker'])
 
+onMounted(() => {
+  emit('change-speaker', images[currentImage.value].votetext)
+})
+
 const images = [
   {
     src: luffy,
     title: "Luffy! (à esquerda)",
-    legenda: "Soon to be rei dos piratas!"
+    legenda: "Soon to be rei dos piratas!",
+    votetext: "Luffy"
   },
   {
     src: mrbeast,
     title: "senhor besta",
-    legenda: "criador de conteúdo riquíssimo"
+    legenda: "criador de conteúdo riquíssimo",
+    votetext: "Sr Besta"
   },
   {
     src: kakyoin,
     title: "Kakyoin",
-    legenda: "Stand user moderadamente vivo"
+    legenda: "Stand user moderadamente vivo",
+    votetext: "Kakyoin"
   }
 ]
 
@@ -29,7 +36,7 @@ const currentImage = ref(0)
 
 function selectImage(index){
   currentImage.value = index
-  emit('change-speaker', images[index].title)
+  emit('change-speaker', images[index].votetext)
 }
 
 function nextImage() {

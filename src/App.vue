@@ -2,11 +2,14 @@
 import { ref, onMounted} from 'vue'
 import commentbox from './components/commentbox.vue'
 import images from './components/Imagens.vue'
+import vote from './components/Vote.vue'
 const title = ref('My First Website')
 
 function buttonpress(){
   console.log("votar!");
 }
+
+const currentSpeaker = ref('')
 
 </script>
 
@@ -14,8 +17,8 @@ function buttonpress(){
   <div class="container">
   <h1>JEEC</h1>
   <h2>Speakers</h2>
-  <images></images>
-  <button @click="buttonpress" class = "voteButton">VOTAR</button>
+  <images @change-speaker="currentSpeaker = $event" />
+  <vote :speaker="currentSpeaker" />
   <h3>Vota num dos 3 speakers!</h3>
   <commentbox></commentbox>
   </div>
