@@ -174,7 +174,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 1px;
   padding-bottom: 60px;
 }
 

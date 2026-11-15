@@ -17,9 +17,10 @@ const currentSpeaker = ref('')
   <div class="container">
   <h1>JEEC</h1>
   <h2>Speakers</h2>
+  <h3>Vota num dos 3 speakers!</h3>
   <images @change-speaker="currentSpeaker = $event" />
   <vote :speaker="currentSpeaker" />
-  <h3>Vota num dos 3 speakers!</h3>
+  
   <commentbox></commentbox>
   </div>
 </template>
@@ -60,22 +61,6 @@ h3 {
                0 0 40px #ffffff;
 }
 
-.voteButton{
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 8px;
-  scale: 4;
-  background-color: rgba(0, 0, 255, 0.294);
-  font-family: 'Lexend Exa';
-  padding: 3px;
-  line-height: .8;
-  
-}
-
-.voteButton:hover{
-  background-color: rgba(138, 138, 184, 0.294);
-  transform: scale(1.05);
-}
 </style>
 
 
