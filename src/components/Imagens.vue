@@ -89,7 +89,7 @@ function previousImage() {
   position: relative;
   width: 100%;
   max-width: 700px;
-  margin: 40px auto;
+  margin: 20px auto;
   overflow: hidden;
   border-radius: 15px;
 }
@@ -123,7 +123,7 @@ button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.871);
   color: white;
   border: none;
   padding: 15px;

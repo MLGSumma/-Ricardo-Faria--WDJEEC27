@@ -3,6 +3,8 @@ import { ref, onMounted} from 'vue'
 import commentbox from './components/commentbox.vue'
 import images from './components/Imagens.vue'
 import vote from './components/Vote.vue'
+import calendar from './components/Datepicker.vue'
+
 const title = ref('My First Website')
 
 function buttonpress(){
@@ -15,13 +17,17 @@ const currentSpeaker = ref('')
 
 <template>
   <div class="container">
-  <h1>JEEC</h1>
-  <h2>Speakers</h2>
-  <h3>Vota num dos 3 speakers!</h3>
-  <images @change-speaker="currentSpeaker = $event" />
-  <vote :speaker="currentSpeaker" />
-  
-  <commentbox></commentbox>
+    <h1>JEEC</h1>
+    <h2>Speakers</h2>
+    <h3>Vota num dos 3 speakers!</h3>
+    <div class="conteudos">
+      <images @change-speaker="currentSpeaker = $event" />
+      <vote :speaker="currentSpeaker" />
+      <div class="sideways">
+      <calendar></calendar>
+      </div>
+      <commentbox></commentbox>
+    </div>
   </div>
 </template>
 
@@ -80,4 +86,18 @@ body {
   border-left: none;
   border-right: none;
 }
+
+.conteudos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.sideways {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
 </style>

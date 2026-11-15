@@ -74,11 +74,16 @@ button {
   color: white;
   cursor: pointer;
   transition: 0.3s;
+  font-family: 'Lexend Exa';
+}
+
+h2, h3 {
+  font-family: 'Lexend Exa';
 }
 
 button:hover {
   background: #60a5fa;
-  box-shadow: 0 0 15px #60a5fa;
+  box-shadow: 0 0 15px #60a5fac8;
 }
 
 .comment {
