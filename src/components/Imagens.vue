@@ -20,14 +20,14 @@ const images = [
   },
   {
     src: mrbeast,
-    title: "senhor besta",
-    legenda: "criador de conteúdo riquíssimo",
+    title: "Senhor Besta",
+    legenda: "Criador de conteúdo riquíssimo.",
     votetext: "Sr Besta"
   },
   {
     src: kakyoin,
     title: "Kakyoin",
-    legenda: "Stand user moderadamente vivo",
+    legenda: "Stand user moderadamente vivo...",
     votetext: "Kakyoin"
   }
 ]
@@ -51,12 +51,8 @@ function previousImage() {
 
 <template>
   <div class="imagescontainer">
-    <div class="imgtxt">
-        <h2>{{ images[currentImage].title }}</h2>
-        <p>{{ images[currentImage].legenda }}</p>
-    </div>
+    <h2>{{ images[currentImage].title }}</h2>
     <div class="slideshow">
-
       <img
         :src="images[currentImage].src"
         alt="Slideshow image"
@@ -79,8 +75,9 @@ function previousImage() {
           @click="currentImage = index"
         ></span>
       </div>
-
     </div>
+    
+    <p>{{ images[currentImage].legenda }}</p>
   </div>
 </template>
 
@@ -88,8 +85,7 @@ function previousImage() {
 .slideshow {
   position: relative;
   width: 100%;
-  max-width: 700px;
-  margin: 20px auto;
+  max-width: 400px;
   overflow: hidden;
   border-radius: 15px;
 }
@@ -99,22 +95,15 @@ function previousImage() {
   height: 400px;
   object-fit: cover;
   display: block;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
-.imgtxt {
-  position: relative;
-  top: 25px;
-}
-
-.imgtxt h2{
-  position: relative;
-  top: 20px;
+h2{
   font-family: 'Lexend Exa';
   font-size: 30px;
 }
-.imgtxt p{
-  position: relative;
-  top: 460px;
+p{
   font-family: 'Lexend Exa';
   font-size: 20px;
 }
@@ -174,8 +163,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1px;
-  padding-bottom: 60px;
+  gap: 20px;
 }
 
 </style>

@@ -55,6 +55,10 @@ onUnmounted(() => {
     >
       {{ hasVoted ? 'Voto Registado' : 'Votar' }}
     </button>
+    
+    <p v-if="!hasVoted">
+      (carrega no botão "votar" na imagem de quem pretende votar!)
+    </p>
 
     <p v-if="hasVoted" class="vote-status">
       Votaste {{ votedSpeaker }}!
@@ -115,7 +119,8 @@ onUnmounted(() => {
 }
 
 .voteButton:hover:not(.voted){
-  background-color: rgba(138, 138, 184, 0.294);
+  background: #60a5fa;
+  box-shadow: 0 0 15px #60a5fac8;
   transform: scale(1.05);
 }
 
@@ -162,6 +167,12 @@ onUnmounted(() => {
   font-family: 'Lexend Exa';
   font-size: 24px;
 }
+
+p {
+  font-family: 'Lexend Exa';
+  font-size: 20px;
+}
+
 
 .popup-buttons {
   display: flex;
